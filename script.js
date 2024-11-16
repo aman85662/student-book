@@ -1,4 +1,4 @@
-const students= ["aman", "amit", "sumit", "ravi"];
+const students= ["aman"];
 
 
 function displayStudents() {
@@ -9,10 +9,17 @@ function displayStudents() {
     }
 }
 displayStudents();
+const studentInput= document.getElementById("studentName");
 function addStudents(){
     const studentInput= document.getElementById("studentName");
     students.push(studentInput.value);
     studentInput.value = "";
    displayStudents();
   }
-displayStudents();
+
+  function removeStudent(){
+   const studentIndex = students.indexOf(studentInput.value);
+   students.splice(studentIndex,1);
+   studentInput.value = "";
+    displayStudents();
+    }
