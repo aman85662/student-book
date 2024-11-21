@@ -11,7 +11,6 @@ function displayStudents() {
 displayStudents();
 const studentInput= document.getElementById("studentName");
 function addStudents(){
-    const studentInput= document.getElementById("studentName");
     students.push(studentInput.value);
     studentInput.value = "";
    displayStudents();
@@ -21,5 +20,6 @@ function addStudents(){
    const studentIndex = students.indexOf(studentInput.value);
    students.splice(studentIndex,1);
    studentInput.value = "";
+   
     displayStudents();
     }
